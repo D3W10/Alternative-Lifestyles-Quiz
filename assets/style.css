@@ -1,0 +1,170 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 70px;
+    box-sizing: border-box;
+    font-family: quizmontserrat;
+    overflow: hidden;
+    user-select: none;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3.5em;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+h3 {
+    margin: 0 0 30px 0;
+    font-size: 2.7em;
+}
+
+p {
+    margin-left: 14px;
+    font-weight: 500;
+    width: 416px;
+}
+
+button {
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    outline: 0;
+    font-family: quizmontserrat;
+    font-weight: 600;
+    font-size: 1em;
+    background-color: rgb(230, 230, 230);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+button:disabled {
+    transition: none;
+    background-color: rgb(240, 240, 240);
+    cursor: default;
+}
+
+button:hover:disabled {
+    background-color: rgb(240, 240, 240);
+}
+
+.page {
+    transition: all 0.3s;
+}
+
+#madeby {
+    position: absolute;
+    bottom: 70px;
+    left: 70px;
+}
+
+#madeby p {
+    margin: 10px 0 0 0;
+    width: auto;
+}
+
+#page1, #page2, #page3, #page4, #page5, #leaderpage {
+    display: none;
+    opacity: 0;
+}
+
+.option {
+    display: flex;
+    width: 500px;
+    height: 70px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.checkbox {
+    width: 42px;
+    height: 42px;
+    background-color: rgb(210, 210, 210);
+    margin-left: 14px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.checkbox:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+.resultBox {
+    display: flex;
+    width: 500px;
+    height: 70px;
+    background-color: white;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.squareBox {
+    width: 42px;
+    height: 42px;
+    margin-left: 14px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+#correctBox {
+    background-color: rgb(52, 199, 89);
+}
+
+#wrongBox {
+    background-color: rgb(255, 59, 48);
+}
+
+@font-face {
+    font-family: quizmontserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: quizmontserrat;
+    src: url(fonts/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: quizmontserrat;
+    src: url(fonts/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: quizmontserrat;
+    src: url(fonts/Montserrat-Bold.ttf);
+    font-weight: 700;
+}

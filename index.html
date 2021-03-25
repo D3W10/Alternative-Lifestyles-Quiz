@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Alternative Lifestyles Quiz">
+        <meta name="author" content="D3W10; Babyzz">
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="icon" href="./assets/favicon.svg">
+        <title>Alternative Lifestyles | Quiz</title>
+    </head>
+    <body>
+        <div class="page" id="homepage">
+            <h1>Alternative Lifestyles Quiz</h1>
+            <h2>Inglês - M6</h2>
+            <div id="madeby">
+                <p>Daniel Nunes <u>I190044</u></p>
+                <p>David Pereira <u>I190046</u></p>
+            </div>
+            <button onclick="quizStart()">Start</button>
+        </div>
+        <div class="page" id="page1">
+            <h2>Question 1</h2>
+            <h3>Which of these is a characteristic of freegans?</h3>
+            <div class="options">
+                <div class="option">
+                    <div class="checkbox" id="1-1" onclick="select('1-1')"></div>
+                    <p>Living with only things I really need</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="1-2" onclick="select('1-2')"></div>
+                    <p>Live isolated from the society</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="1-3" onclick="select('1-3')"></div>
+                    <p>Buy as little as possible</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="1-4" onclick="select('1-4')"></div>
+                    <p>Only eat food that doesn't come from animals</p>
+                </div>
+            </div>
+            <button id="btnPage1" onclick="verifyPage('1-3')" disabled>Verify</button>
+        </div>
+        <div class="page" id="page2">
+            <h2>Question 2</h2>
+            <h3>When did the minimalist lifestyle begin?</h3>
+            <div class="options">
+                <div class="option">
+                    <div class="checkbox" id="2-1" onclick="select('2-1')"></div>
+                    <p>1940</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="2-2" onclick="select('2-2')"></div>
+                    <p>1950</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="2-3" onclick="select('2-3')"></div>
+                    <p>1960</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="2-4" onclick="select('2-4')"></div>
+                    <p>1970</p>
+                </div>
+            </div>
+            <button id="btnPage2" onclick="verifyPage('2-2')" disabled>Verify</button>
+        </div>
+        <div class="page" id="page3">
+            <h2>Question 3</h2>
+            <h3>Who were the founders of the minimalist lifestyle?</h3>
+            <div class="options">
+                <div class="option">
+                    <div class="checkbox" id="3-1" onclick="select('3-1')"></div>
+                    <p>Carlos Andre, Dani Flavin, Donalde Judd, Sole LeWitt, Agnesss Martin and Roberto Morris</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="3-2" onclick="select('3-2')"></div>
+                    <p>Ruben Beato, Maria Saraiva, James Smith and Sonya Victor</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="3-3" onclick="select('3-3')"></div>
+                    <p>Dany James, Joel Guns, Ruben Gordo and Donalde Judd</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="3-4" onclick="select('3-4')"></div>
+                    <p>Carl Andre, Dan Flavin, Donald Judd, Sol LeWitt, Agnes Martin and Robert Morris</p>
+                </div>
+            </div>
+            <button id="btnPage3" onclick="verifyPage('3-4')" disabled>Verify</button>
+        </div>
+        <div class="page" id="page4">
+            <h2>Question 4</h2>
+            <h3>What's the lifestyle that "respects" animals?</h3>
+            <div class="options">
+                <div class="option">
+                    <div class="checkbox" id="4-1" onclick="select('4-1')"></div>
+                    <p>Minimalists</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="4-2" onclick="select('4-2')"></div>
+                    <p>Freeganism</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="4-3" onclick="select('4-3')"></div>
+                    <p>Veganism</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="4-4" onclick="select('4-4')"></div>
+                    <p>House truckers</p>
+                </div>
+            </div>
+            <button id="btnPage4" onclick="verifyPage('4-3')" disabled>Verify</button>
+        </div>
+        <div class="page" id="page5">
+            <h2>Question 5</h2>
+            <h3>Which of these things do vegans not eat?</h3>
+            <div class="options">
+                <div class="option">
+                    <div class="checkbox" id="5-1" onclick="select('5-1')"></div>
+                    <p>Eggs</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="5-2" onclick="select('5-2')"></div>
+                    <p>Carrots</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="5-3" onclick="select('5-3')"></div>
+                    <p>Broccoli</p>
+                </div>
+                <div class="option">
+                    <div class="checkbox" id="5-4" onclick="select('5-4')"></div>
+                    <p>None of the above</p>
+                </div>
+            </div>
+            <button id="btnPage5" onclick="verifyPage('5-1')" disabled>Verify</button>
+        </div>
+        <div class="page" id="leaderpage">
+            <h1 id="resultsHeader">Results</h1>
+            <div id="resultsBox">
+                <div class="resultBox">
+                    <div class="squareBox" id="correctBox">0</div>
+                    <p>Correct</p>
+                </div>
+                <div class="resultBox">
+                    <div class="squareBox" id="wrongBox">0</div>
+                    <p>Wrong</p>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/home.js"></script>
+    </body>
+</html>
